@@ -34,7 +34,7 @@ const ServicesLanding = () => {
     {/* Home Page Services Show */}
       <div className='ourService w-[100%]  min-h-screen md:flex justify-between items-start md:my-8'>
         <div className="left w-[100%] md:px-10 flex-col md:space-y-10 rounded-2xl md:min-h-screen ">
-          <h1 className='OurServiceContent md:text-6xl text-2xl text-start py-4 mt-4'>Our <span className='text-green-500'>Services</span></h1>
+          <h1 className='md:text-6xl text-2xl text-start py-4 mt-4'>Our <span className='text-green-500'>Services</span></h1>
           <ul className='md:px-8 px-4 text-md  md:text-lg list-disc space-y-2 md:space-y-5'>
             {tools.map((items) => (
               <li>{items.name}</li>
@@ -49,7 +49,7 @@ const ServicesLanding = () => {
                 initial={{ opacity: 0, rotate: 30 }}
                 whileInView={{ opacity: 1, rotate: 0 }}
                 transition={{ type: "spring", stiffness: 100 }}
-                className={`flex md:text-5xl text-2xl border shadow-xl shadow-gray-300 rounded-xl md:w-[120px] w-[85px] h-[85px] md:h-[120px] items-center ${items.col}  justify-center hover:text-black hover:text-8xl transition-all ease-in-out duration-700`}>{items.img}
+                className={`flex md:text-6xl text-2xl border shadow-xl shadow-gray-300 rounded-xl md:w-[120px] w-[85px] h-[85px] md:h-[120px] items-center ${items.col}  justify-center`}>{items.img}
               </motion.div>
             ))}
           </div>

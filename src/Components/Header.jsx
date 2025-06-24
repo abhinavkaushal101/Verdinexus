@@ -167,7 +167,7 @@ const Header = () => {
     <header className={`transition-all duration-300 fixed left-[0%] z-[150] text-center top-3 right-[0%] w-full md:w-[80%] rounded-full md:px-5 mx-auto  ${scrolled ? "bg-white/50 backdrop-blur-md text-green-950" : "bg-transparent text-white"
       }`}>
       <div className="container mx-auto h-[50px] md:h-[80px] px-4  flex items-center align-middle justify-between">
-        <div className=" font-bold md:w-[50%] w-[60%] items-start flex md:mx-auto xl:px-10 overflow-x-hidden">
+        <div className=" font-bold md:w-[50%] w-[50%] items-start flex md:mx-auto xl:px-10 overflow-x-hidden">
           <Link to='/'>{scrolled ? <img className='w-[60%] object-cover' src={logo} /> : <img className='w-[60%] object-cover' src={logow} />}</Link></div>
         <nav className="hidden md:flex items-center  align-middle justify-center space-x-6 md:w-[60%] w-100% text-md font-medium">
           <div class="dropdown ">

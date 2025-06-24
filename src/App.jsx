@@ -11,6 +11,7 @@ import ServiceDetails from './Pages/ServiceDetails'
 import Blog from './Pages/Blog'
 import BlogDetails from './Pages/BlogDetails'
 import Sample from './Components/Sample'
+import About from './Pages/About'
 
 
 
@@ -34,7 +35,7 @@ function AppLayout() {
       <Route path='/signup' element={<SignupPage/>}/>
       <Route path='/services/:serviceId' element={<ServiceDetails/>}/>
       <Route path='/blog/:blogId' element={<BlogDetails/>}/>
-
+      <Route path='/about' element={<About/>}/>
       <Route path='/blog' element={<Blog/>}/>
       <Route path='/sample' element={<Sample/>}/>
       

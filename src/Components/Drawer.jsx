@@ -32,7 +32,7 @@ function TemporaryDrawer() {
   const DrawerList = (
                       // This is Only For Mobile View 
 
-    <Box sx={{ width: 300 }} className="bg-green-950 px-5 text-white h-full" role="presentation" >
+    <Box sx={{ width: 300 }} className="bg-green-950 px-5 text-white h-screen" role="presentation" >
       <div className='flex flex-col justify-between'>
         <div className='flex justify-between relative w-[100%] items-center '>
           <img className='w-[50%] object-cover' src={logo} alt="" />
@@ -47,7 +47,7 @@ function TemporaryDrawer() {
           <Link  className='border-b' to='/FaQ'>F&Q</Link>
         </ul>
 
-        <div className='mt-32'>
+        <div className=' '>
           <h2 className="text-lg text-center font-semibold mb-2">Follow Us</h2>
           <div className="flex space-x-4 justify-center">
             <a href="#" className="text-gray-400 hover:text-white text-xl"><ImLinkedin2 /></a>

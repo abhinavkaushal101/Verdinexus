@@ -55,8 +55,8 @@ const Home = () => {
         <Boxes />
         <Link to='/blog'><button className='textHovers my-10 bg-green-950 text-xl w-[200px] dark:bg-white dark:text-green-950 text-white rounded-full font-semibold hover:bg-green-300 hover:text-green-950 transition-all space-y-2 ease-in-out duration-700'><h3 className='pt-1'>Read more</h3><h3>Read more</h3></button></Link>
       </div>
-      <div className='w-[90%] md:w-[80%]  md:h-[100vh] my-6 flex flex-col text-center items-center justify-center mx-auto'>
-        <div className='my-24 '><h1 className='md:text-4xl py-4'>Client Testimonials </h1>
+      <div className='w-[90%] md:w-[80%]  md:h-[100vh] my-2 flex flex-col text-center items-center justify-center mx-auto'>
+        <div className='md:my-24 '><h1 className='md:text-4xl py-4'>Client Testimonials </h1>
           <p className='md:text-md text-xs'>Our network gathers numerous reputable domestic and international partners </p>
         </div>
         <Company />
