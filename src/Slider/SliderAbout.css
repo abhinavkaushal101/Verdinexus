@@ -1,0 +1,102 @@
+.swiperWrapper{
+    /* height: 120vh; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background: linear-gradient(#DDF9DB,rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)); */
+    /* background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://img.freepik.com/free-vector/watercolor-emerald-background_23-2150270303.jpg?t=st=1750866887~exp=1750870487~hmac=b90953bcbb1d13225ddddb197fd20a80809fc14b1010e7eecddff321413264aa&w=1800');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+/* margin: 20% auto; */
+/* padding: 30% 0%; */
+
+}
+
+.mySwiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slides {
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+}
+.swiper-slides img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+@media (max-width:768px) {
+    .swiper-slides {
+  height:100vh;
+}
+.swiperWrapper{
+    flex-direction: row;
+}
+.swiper-slides img{
+    height: 100%;
+    object-fit: cover;
+}
+.textSlider{
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 15%;
+    
+}
+.textSlider h1{
+    font-size:x-large;
+    width: 90%;
+}
+.textSlider p{
+    width: 80%;
+    text-align: center;
+}
+}
+.swiper-slides img {
+  display: block;
+  width: 100%;
+}
+.textSlider{
+    position: absolute;
+    top: 60%;
+    z-index: 100;
+    width: 100%;
+    /* font-size: 2rem; */
+    /* display: none; */
+    color: white;
+    opacity: 0;
+    margin: 0 auto;
+    transform: translateY(100%);
+    text-align: center;
+    transition: all 1s;
+    /* animation: animate .5 ; */
+}
+
+.swiper-slide-active .textSlider{
+opacity: 1;
+transform: translateY(0);
+}
+/* @keyframes animate {
+    from{
+    opacity: 0;
+    transform: translateY(100px);
+    filter: blur(33px);
+    }
+    to{
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    }
+} */

@@ -18,7 +18,7 @@ const Home = () => {
     <>
 
 
-      <div >
+      
         {/* <ImageSlider /> */}
         <div className='absolute w-[70%] h-screen text-center top-[90%] left-[50%] transform -translate-x-1/2 -translate-y-1/2  md:text-7xl  text-2xl font-bold text-white z-10 '>
           <div className='py-1.5 mb-1 w-[50%] md:w-[15%] flex justify-center bg-gradient-to-r from-teal-400 to-yellow-200 text-amber-950 items-center rounded-full text-xl' >
@@ -43,7 +43,7 @@ const Home = () => {
             <h2>Start Your ESG Journey Today →</h2></div>
 
         </div>
-      </div>
+      
       <FoldingScroller />
 
       <div className='BordersBox flex flex-col my-10 dark:bg-green-950 dark:text-white '>

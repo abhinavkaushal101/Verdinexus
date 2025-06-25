@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Contact from '../assets/graphic/Contact.png'
 import { RxExit } from "react-icons/rx";
+import { FaXmark } from "react-icons/fa6";
+
 
 function ContactUs() {
     const [formData, setFormData] = useState({
@@ -29,11 +31,12 @@ function ContactUs() {
     };
 
     return (
-        <>        
+        <>
             <div className="h-auto bg-gray-100 flex-col md:flex-row flex items-center justify-center px-4 py-12">
 
-                <div className='p-10 items-center mx-auto w-[100%]'>
-                   {/* <div className='absolute top-3 z-0 left-4'><a href="/"> <RxExit size='30px' /></a></div> */}
+                <div className='p-10 items-center mx-auto relative w-[100%]'>
+
+                    <div className='absolute top-[-10%] text-4xl hover:rounded-[50%] hover:bg-black px-2 py-2 hover:text-white transition-all .5s  left-4'><a href="/"><FaXmark/></a></div>
                     <div className='w-[60%] mx-auto justify-center flex items-center'>
                         <img className='' src={Contact} alt="" />
                     </div>
@@ -48,6 +51,7 @@ function ContactUs() {
                         <div className="text-center p-8 text-green-600 text-xl">Thank you! We'll be in touch soon.</div>
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-6">
+                            {/* <div className='absolute top-[-12%] text-4xl right-0'><FaXmark/></div> */}
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block mb-1 text-sm font-medium text-gray-600">Name</label>
@@ -110,7 +114,9 @@ function ContactUs() {
                                 >
                                     Send Message
                                 </button>
+                                
                             </div>
+
                         </form>
                     )}
                 </div>

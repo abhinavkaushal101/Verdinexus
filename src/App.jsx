@@ -12,6 +12,7 @@ import Blog from './Pages/Blog'
 import BlogDetails from './Pages/BlogDetails'
 import Sample from './Components/Sample'
 import About from './Pages/About'
+import SliderAbout from './Slider/SliderAbout'
 
 
 
@@ -29,7 +30,7 @@ function AppLayout() {
     {!hideLayout && <Header />}
       <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/services' element={<ESGCommandCenter/>}/>
+      {/* <Route path='/services' element={<ESGCommandCenter/>}/> */}
       <Route path='/FaQ' element={<Faq/>}/>
       <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/signup' element={<SignupPage/>}/>
@@ -37,7 +38,7 @@ function AppLayout() {
       <Route path='/blog/:blogId' element={<BlogDetails/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/blog' element={<Blog/>}/>
-      <Route path='/sample' element={<Sample/>}/>
+      <Route path='/services' element={<SliderAbout/>}/>
       
 
 

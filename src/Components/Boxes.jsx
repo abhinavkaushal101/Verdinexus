@@ -87,8 +87,8 @@ const Boxes = () => {
             <SwiperSlide key={index}>
 
               <motion.div className='flex items-start mx-auto flex-col md:w-[350px] px-2 py-2'>
-                <div className='overflow-hidden shadow-xs shadow-white rounded-xl'>
-                  <img className='object-contain w-[100%] rounded-xl hover:scale-[1.1] transition-all ease-in-out duration-700' src={dataa.img} alt="" />
+                <div className='overflow-hidden shadow-xs shadow-white h-[250px] rounded-xl'>
+                  <img className='object-cover w-[100%] h-[100%] rounded-xl hover:scale-[1.1] transition-all ease-in-out duration-700' src={dataa.img} alt="" />
                 </div>
                 <h3 className='text-xs py-2'>{dataa.date}</h3>
                 <h1 className='font-bold dark:text-green-200 text-gray-800 py-2'>{dataa.heading}</h1>

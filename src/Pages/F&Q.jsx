@@ -28,7 +28,7 @@ function Faq() {
 
   return (
     <div className="min-h-screen  bg-gray-50 ">
-        <div className='bg-green-950 m-0 h-[50vh] items-end flex justify-center'>
+        <div className='upperBox m-0 h-[50vh] items-end flex justify-center'>
         <h2 className="text-4xl font-bold text-center text-white mb-10">Frequently Asked Questions</h2>
         </div>
       <div className="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
