@@ -43,13 +43,13 @@ const ServicesLanding = () => {
         </div>
         <div className="right md:block w-[100%] rounded-2xl md:min-h-screen ">
           <h1 className='py-4 ml-4  mt-4 text-2xl'>Welcome to <span className='text-green-500'>ESG COMMAND Center</span></h1>
-          <div className='grid grid-cols-3 md:py-[50px] mt-[10%]  sm:grid-cols-2 lg:grid-cols-4 gap-4'>
+          <div className='grid grid-cols-3 sm:grid-cols-3 items-center md:py-[50px] mt-[10%] lg:grid-cols-4 gap-4'>
             {tools.map((items) => (
               <motion.div
                 initial={{ opacity: 0, rotate: 30 }}
                 whileInView={{ opacity: 1, rotate: 0 }}
                 transition={{ type: "spring", stiffness: 100 }}
-                className={`flex md:text-6xl text-2xl border shadow-xl shadow-gray-300 rounded-xl md:w-[120px] w-[85px] h-[85px] md:h-[120px] items-center ${items.col}  justify-center`}>{items.img}
+                className={`flex md:text-6xl text-2xl border shadow-xl dark:shadow-gray-900  rounded-xl md:w-[120px] w-[85px] h-[85px] md:h-[120px] items-center ${items.col}  justify-center`}>{items.img}
               </motion.div>
             ))}
           </div>

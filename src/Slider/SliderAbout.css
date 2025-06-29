@@ -1,12 +1,14 @@
 .swiperWrapper{
-    /* height: 120vh; */
+    /* min-height: 100vh; */
     display: flex;
+    padding-top: 10%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
     /* background: linear-gradient(#DDF9DB,rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)); */
     /* background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://img.freepik.com/free-vector/watercolor-emerald-background_23-2150270303.jpg?t=st=1750866887~exp=1750870487~hmac=b90953bcbb1d13225ddddb197fd20a80809fc14b1010e7eecddff321413264aa&w=1800');
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://cdn.pixabay.com/photo/2020/11/09/15/48/graph-5727061_1280.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -19,15 +21,15 @@
 
 .mySwiper {
   width: 100%;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   padding-bottom: 50px;
 }
 
 .swiper-slides {
   background-position: center;
   background-size: cover;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 450px;
 }
 .swiper-slides img{
     object-fit: cover;
@@ -39,8 +41,13 @@
     .swiper-slides {
   height:100vh;
 }
+.mySwiper{
+    width: 100% !important;
+    height: 100% !important;
+}
 .swiperWrapper{
     flex-direction: row;
+    padding-top: 0% !important;
 }
 .swiper-slides img{
     height: 100%;
@@ -53,6 +60,7 @@
     align-items: center;
     flex-direction: column;
     padding: 0 15%;
+    top: 70% !important;
     
 }
 .textSlider h1{
@@ -70,7 +78,7 @@
 }
 .textSlider{
     position: absolute;
-    top: 60%;
+    top: 50%;
     z-index: 100;
     width: 100%;
     /* font-size: 2rem; */

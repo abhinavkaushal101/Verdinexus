@@ -84,10 +84,11 @@ const SliderAbout = () => {
     ]
 
 
-    return (
+    return (<>
+                {/* <div  className='md:flex hidden bg-[#0f2c2c] h-[30vh] justify-center items-end text-4xl text-white pb-6'><h1>Services</h1></div> */}
 
-        <div className='swiperWrapper h-screen md:h-[120vh]'>
-            <div className='text-white hidden md:block md:mt-[10%] text-2xl'><h1><span className='text-green-200'>Our</span> Services</h1></div>
+        <div className='swiperWrapper bg-[#0f2c2c] h-screen relative'>
+            
             <Swiper
                 className="mySwiper"
                 effect={'coverflow'}
@@ -110,70 +111,17 @@ const SliderAbout = () => {
                     <SwiperSlide key={index} className='swiper-slides'>
                         <img src={item.img} />
                         <div className='textSlider'>
-                            <h1 className='md:text-2xl '>{item.name}</h1>
-                            <p className='text-green-100'>{item.description}</p>
+                            <h1 className='md:text-4xl '>{item.name}</h1>
+                            {/* <p className='text-green-100'>{item.description}</p> */}
                         </div>
                     </SwiperSlide>
 
                 ))}
-                {/* <SwiperSlide className='item'>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          <div className='textSlider'>
-            <h1>PAge1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos necessitatibus earum numquam soluta obcaecati ab, aliquam magnam cupiditate aliquid delectus. Ipsa dignissimos illum consectetur consequatur minus cupiditate tempora, laudantium natus?</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='item'>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          <div className='textSlider'>
-            <h1>PAge1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos necessitatibus earum numquam soluta obcaecati ab, aliquam magnam cupiditate aliquid delectus. Ipsa dignissimos illum consectetur consequatur minus cupiditate tempora, laudantium natus?</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='item'>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          <div className='textSlider'>
-            <h1>PAge1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos necessitatibus earum numquam soluta obcaecati ab, aliquam magnam cupiditate aliquid delectus. Ipsa dignissimos illum consectetur consequatur minus cupiditate tempora, laudantium natus?</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='item'>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          <div className='textSlider'>
-            <h1>PAge1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos necessitatibus earum numquam soluta obcaecati ab, aliquam magnam cupiditate aliquid delectus. Ipsa dignissimos illum consectetur consequatur minus cupiditate tempora, laudantium natus?</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='item'>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          <div className='textSlider'>
-            <h1>PAge1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos necessitatibus earum numquam soluta obcaecati ab, aliquam magnam cupiditate aliquid delectus. Ipsa dignissimos illum consectetur consequatur minus cupiditate tempora, laudantium natus?</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='item'>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          <div className='textSlider'>
-            <h1>PAge1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos necessitatibus earum numquam soluta obcaecati ab, aliquam magnam cupiditate aliquid delectus. Ipsa dignissimos illum consectetur consequatur minus cupiditate tempora, laudantium natus?</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='item'>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          <div className='textSlider'>
-            <h1>PAge1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos necessitatibus earum numquam soluta obcaecati ab, aliquam magnam cupiditate aliquid delectus. Ipsa dignissimos illum consectetur consequatur minus cupiditate tempora, laudantium natus?</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className='item'>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          <div className='textSlider'>
-            <h1>PAge1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos necessitatibus earum numquam soluta obcaecati ab, aliquam magnam cupiditate aliquid delectus. Ipsa dignissimos illum consectetur consequatur minus cupiditate tempora, laudantium natus?</p>
-          </div>
-        </SwiperSlide> */}
+               
             </Swiper>
         </div>
+        </>
+
     );
 };
 

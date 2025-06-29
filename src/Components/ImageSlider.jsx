@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Core Swiper
 import 'swiper/css/navigation'; // Navigation buttons
 import 'swiper/css/pagination'; // Pagination dots
+import bg from '../assets/graphic/bg.png'
 
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
@@ -40,9 +41,9 @@ const ImageSlider = () => {
     //   </Swiper>
     // </div>
     <>
-    <div className='sliderimage bg-black w-screen h-screen md:max-w-[100%] mt-0 overflow-hidden mx-auto'>
+    <div className='sliderimage bg-green-950 w-screen h-screen md:max-w-[100%] mt-0 overflow-hidden mx-auto'>
       <video className='  w-[100%] h-screen object-cover inset-0' loop="true" autoplay="autoplay" muted><source src="https://cdn.pixabay.com/video/2018/01/06/13704-250154065_large.mp4"  /></video>
-      {/* <img className='w-[100%] h-screen object-cover' src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1129&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /> */}
+      {/* <img className='w-[100%] h-screen object-cover' src={bg} alt="" /> */}
     </div>
     </>
   );
