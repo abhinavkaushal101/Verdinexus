@@ -1,14 +1,14 @@
 import React from 'react'
-
+import bg from '../assets/graphic/about us.png'
 const About = () => {
   return (<>
-    <div className="relative overflow-hidden h-screen bg-black dark:bg-[#0f2c2c] flex items-center justify-center px-4 py-10">
+    <div style={{backgroundImage: `url(${bg})`, backgroundRepeat:'no-repeat' ,backgroundSize: 'cover', }} className={`relative min-h-screen dark:bg-[#0f2c2c] flex items-center justify-center px-4 `}>
       <div className="max-w-7xl w-full ">
-        <div className="text-white absolute z-30 mx-auto mb-10">
+        <div className="text-white mt-14 mx-9">
           <h2 className="text-7xl font-semibold">Verdi <span className="text-yellow-400">NEXUS</span></h2>
           <p className="mt-3 max-w-xl text-sm">Visit Norway, you will never regret it. This is something incredible - fantastic nature, fjords, fancy outlines of the coast…</p>
         </div>
-        <div className="hex-grid">
+        {/* <div className="hex-grid">
           <div class="w-[29rem] h-[29rem]  absolute z-0 left-[40%] top-[20%] transform -translate-x-0 -translate-y-0  clip-hexagon">
             <img className='object-cover h-full w-full' src="https://w0.peakpx.com/wallpaper/400/1009/HD-wallpaper-travel-the-world-ultra-nature-mountains-travel-scenery-mountain-lake.jpg" alt="" />
           </div>
@@ -24,7 +24,7 @@ const About = () => {
             <div class="w-[20rem] h-[20rem] bg-green-500  absolute z-0 left-[85%] top-[58%] transform -translate-x-0 -translate-y-0  clip-hexagon">
               <img className='object-cover h-full w-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB0tB7-uh1N_yqs6t7yVW_dATfxYfw4Z2TkQ&s" alt="" />
             </div>
-        </div>
+        </div> */}
       </div>
     </div>
   </>

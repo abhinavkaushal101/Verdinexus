@@ -165,151 +165,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    // <header className={`transition-all duration-300 fixed left-[0%] z-[150] text-center top-3 right-[0%] w-full md:w-[90%] rounded-full md:px-5 mx-auto  ${scrolled ? "bg-white/50 backdrop-blur-md text-green-950" : "bg-transparent text-white"
-    //   }`}>
-    //   <div className="container mx-auto h-[50px] md:h-[80px] px-4  flex items-center align-middle justify-between">
-    //     <div className=" font-bold md:w-[50%] w-[50%] items-start flex md:mx-auto xl:px-10 overflow-x-hidden">
-    //       <Link to='/'>{scrolled ? <img className='w-[60%] object-cover' src={logo} /> : <img className='w-[60%] object-cover' src={logow} />}</Link>
-    //     </div>
-    //     <nav className="hidden md:flex items-center  align-middle justify-center space-x-6 md:w-[60%] w-100% text-md font-medium">
-
-    //       {/* Home Menu */}
-    //       <div class="dropdown ">
-    //         <Link to='/'>
-    //           <button class="dropbtn textHover">
-    //             <h3> {t('home')}</h3>
-    //             <h3>{t('home')}</h3>
-    //           </button>
-    //         </Link>
-    //       </div>
-    //       {/* About Menu */}
-    //       <div class="dropdown">
-    //         <Link to='/about'> <button class="dropbtn textHover">
-    //           <h3> {t('About')}</h3>
-    //           <h3>{t('About')}</h3>
-    //         </button></Link>
-    //       </div>
-    //       {/* Services Menu  */}
-    //       <div class="dropdown">
-    //         <Link to='/services'><button class="dropbtn textHover">
-    //           <h3> {t('services')}</h3>
-    //           <h3>{t('services')}</h3>
-    //           {scrolled ? <FontAwesomeIcon icon={faCaretDown} /> : <FontAwesomeIcon icon={faCaretDown} style={{ color: "#00000", }} />}
-    //         </button>
-    //         </Link>
-    //         {/* <div className="dropdown-content">
-    //           <div>
-    //           {Serviceitems.map((service)=>{
-    //             <Link to={`/services/${service.id}`} >{service.id}</Link>
-    //           })}
-    //           </div>
-    //         </div> */}
-    //         {/* <div class="dropdown-content">
-    //           {Serviceitems.map((service) => (
-    //             <div key={service.id}>
-    //               <Link to={`/services/${service.id}`}>{service.name}</Link>
-    //             </div>
-    //           ))}
-    //         </div> */}
-    //       </div>
-    //       {/* Blog Menu  */}
-    //       <div class="dropdown">
-    //         <a href='https://verdinexus.wordpress.com/'>
-    //           <button class="dropbtn textHover">
-    //             <h3> {t('blog')}</h3>
-    //             <h3>{t('blog')}</h3>
-    //           </button>
-    //         </a>
-    //       </div>
-    //       {/* Contact Menu  */}
-    //       <div class="dropdown">
-    //         <Link to='/contactus'> <button class="dropbtn textHover">
-    //           <h3> {t('Contact')}</h3>
-    //           <h3>{t('Contact')}</h3>
-    //         </button></Link>
-    //       </div>
-
-
-    //     </nav>
-
-    //     <div className='hidden gap-4 w-[50%] md:flex justify-center items-center'>
-
-
-    //       {/* <div className=" hidden md:flex bg-white w-[40px] h-[40px] text-xl  justify-center rounded-[50%] font-semibold object-center items-center ">
-    //         <Link><FontAwesomeIcon icon={faUser} style={{ color: "#24314c", }} /></Link>
-    //       </div> */}
-    //       <div className='signupbtn '>
-    //         <Link to='/signup' className='signupbtns'><h3>signup</h3><h3>signup</h3></Link>
-    //       </div>
-    //       <div className="dropdown hidden md:block text-white">
-
-    //       </div>
-    //       {/* three dots feature */}
-    //       <div className='md:block hidden' >
-
-    //         <div className=''>
-    //           <IconButton
-    //             aria-label="more"
-    //             id="long-button"
-    //             aria-controls={open ? 'long-menu' : undefined}
-    //             aria-expanded={open ? 'true' : undefined}
-    //             aria-haspopup="true"
-    //             onClick={handleClick}
-    //           >
-    //             <BsThreeDotsVertical />
-    //           </IconButton>
-    //           <Menu
-    //             id="long-menu"
-    //             anchorEl={anchorEl}
-    //             open={open}
-    //             onClose={handleClose}
-    //             slotProps={{
-    //               paper: {
-    //                 style: {
-    //                   // maxHeight: ITEM_HEIGHT * 4.5,
-    //                   width: '15ch',
-    //                 },
-    //               },
-    //               list: {
-    //                 'aria-labelledby': 'long-button',
-    //               },
-    //             }}
-    //           >
-    //             {/* {options.map((option) => ( */}
-    //             <MenuItem onClick={handleClose}>
-    //               <Link to='/FaQ'><button class="dropbtn">{t('fQ')}</button></Link>
-    //             </MenuItem>
-    //             <MenuItem><button onClick={ToggleTheme} className='text-xl'>{theme === 'light' ? 'dark' && "Dark" : 'light' && "Light"}
-    //             </button></MenuItem>
-    //             {/* ))} */}
-    //           </Menu>
-    //         </div>
-
-    //       </div>
-    //       <div className="dropdown  ">
-    //         <div className='text-md items-center flex'>{
-    //           scrolled ? <FontAwesomeIcon icon={faGlobe} style={{ color: '#00000' }} /> : <FontAwesomeIcon icon={faGlobe} />} <p className='px-1'>{t('Language')}</p>
-    //           {scrolled ? <FontAwesomeIcon icon={faCaretDown} /> : <FontAwesomeIcon icon={faCaretDown} />}
-    //         </div>
-    //         <div class="dropdown-contents flex-col items-start">
-    //  <div className='text-md items-center flex text-lg text-white'>
-    //             {scrolled ? <FontAwesomeIcon icon={faGlobe} style={{ color: '#00000' }} /> : <FontAwesomeIcon icon={faGlobe} style={{ color: '#fffff' }} />} <p className='px-1'>{t('Language')}</p>
-    //             {scrolled ? <FontAwesomeIcon icon={faCaretDown} /> : <FontAwesomeIcon icon={faCaretDown} />}
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-
-
-    // <div className="md:hidden flex justify-center items-center">
-    //   <button onClick={ToggleTheme} className='text-xl'>{theme === 'light' ? 'dark' && <FontAwesomeIcon icon={faMoon} style={{ color: "#FFD43B", }} /> : 'light' && <FontAwesomeIcon icon={faSun} style={{ color: "#FFD43B", }} />}
-    //   </button>
-    //   <div className="text-gray-700 focus:outline-none">
-    //     <TemporaryDrawer />
-    //   </div>
-    // </div>
-    //   </div>
-    // </header>
     <div className='relative w-full  '>
       <header className={` ${scrolled ? "bg-white/50 backdrop-blur-md text-green-950" : "bg-transparent text-white"} transition-all duration-300 fixed left-[0%] z-[150] md:px-6 md:h-[80px] h-[50px] transform -translate-x-0 translate-y-0 rounded-xl flex justify-around items-center top-2 right-[0%] md:w-[90%] mx-auto`}>
         <div className="logo md:w-[23%] w-[50%] md:pl-4">
@@ -344,7 +199,7 @@ const Header = () => {
               <h3>{t('service')}</h3>
             </div>
           </NavLink>
-          <a href='https://verdinexus.wordpress.com/' className={({ isActive }) =>
+          <NavLink to='/blog' className={({ isActive }) =>
             `textHover transition-all duration-200 ${isActive ? 'text-yellow-400 underline underline-offset-4' : 'text-white hover:text-yellow-300'
             }`
           }>
@@ -352,7 +207,16 @@ const Header = () => {
               <h3> {t('Blog')}</h3>
               <h3>{t('Blog')}</h3>
             </div>
-          </a>
+          </NavLink>
+          {/* <a href='https://verdinexus.wordpress.com/' className={({ isActive }) =>
+            `textHover transition-all duration-200 ${isActive ? 'text-yellow-400 underline underline-offset-4' : 'text-white hover:text-yellow-300'
+            }`
+          }>
+            <div class={`textHover ${scrolled ? 'text-green-950' : 'text-white'}`}>
+              <h3> {t('Blog')}</h3>
+              <h3>{t('Blog')}</h3>
+            </div>
+          </a> */}
           <NavLink to='/contactus' className={({ isActive }) =>
             `textHover transition-all duration-200 ${isActive ? 'text-yellow-400 underline underline-offset-4' : 'text-white hover:text-yellow-300'
             }`

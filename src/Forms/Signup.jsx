@@ -1,132 +1,171 @@
 import React, { useState } from 'react';
-import { RxExit } from "react-icons/rx";
+import { FaXmark } from "react-icons/fa6";
+import { Link, useNavigate } from 'react-router-dom';
 
 
-function SignupPage() {
-    const [formData, setFormData] = useState({
-        fullName: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
-        gender: '',
-        country: '',
+const Signup = () => {
+  const [formData, setFormData] = useState({
+    companyName: '',
+    companyWebsite: '',
+    companyEmail: '',
+    designation: '',
+    personEmail: '',
+    password: '',
+    confirmPassword: '',
+  });
 
-    });
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
-    const handleChange = (e) => {
-        const { name, value, type, checked } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: type === 'checkbox' ? checked : value,
-        }));
-    };
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form Data:', formData);
-        alert("Signup")
-    };
+  const validate = () => {
+    const newErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
-            <div className='absolute top-5 right-8'><a href="/"> <RxExit size='30px' /></a></div>
+    if (!formData.companyName.trim()) newErrors.companyName = 'Required';
+    if (!formData.companyWebsite.trim()) newErrors.companyWebsite = 'Required';
+    if (!emailRegex.test(formData.companyEmail)) newErrors.companyEmail = 'Invalid email';
+    if (!formData.designation.trim()) newErrors.designation = 'Required';
+    if (!emailRegex.test(formData.personEmail)) newErrors.personEmail = 'Invalid email';
 
-            <form onSubmit={handleSubmit} className="w-full max-w-2xl bg-white rounded-2xl shadow-xl p-8 space-y-6">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Signup Form</h2>
+    if (formData.password.length < 8) {
+      newErrors.password = 'Minimum 8 characters';
+    } else if (!/[A-Z]/.test(formData.password)) {
+      newErrors.password = 'Must contain an uppercase letter';
+    } else if (!/[0-9]/.test(formData.password)) {
+      newErrors.password = 'Must contain a number';
+    }
 
-                {/* Personal Information */}
-                <div>
-                    <h3 className="text-lg font-semibold text-gray-700 mb-2">Personal Information</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input
-                            type="text"
-                            name="fullName"
-                            placeholder="Full Name"
-                            value={formData.fullName}
-                            onChange={handleChange}
-                            className="border p-2 rounded w-full"
-                            required
-                        />
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email Address"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="border p-2 rounded w-full"
-                            required
-                        />
-                    </div>
-                </div>
+    if (formData.password !== formData.confirmPassword) {
+      newErrors.confirmPassword = 'Passwords do not match';
+    }
 
-                {/* Account Details */}
-                <div>
-                    <h3 className="text-lg font-semibold text-gray-700 mb-2">Password</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            className="border p-2 rounded w-full"
-                            required
-                        />
-                        <input
-                            type="password"
-                            name="confirmPassword"
-                            placeholder="Confirm Password"
-                            value={formData.confirmPassword}
-                            onChange={handleChange}
-                            className="border p-2 rounded w-full"
-                            required
-                        />
-                    </div>
-                </div>
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
-                {/* Preferences */}
-                <div>
-                    <h3 className="text-lg font-semibold text-gray-700 mb-2">Preferences</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <select
-                            name="gender"
-                            value={formData.gender}
-                            onChange={handleChange}
-                            className="border p-2 rounded w-full"
-                            required
-                        >
-                            <option value="">Select Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <select
-                            name="country"
-                            value={formData.country}
-                            onChange={handleChange}
-                            className="border p-2 rounded w-full"
-                            required
-                        >
-                            <option value="">Select Country</option>
-                            <option value="india">India</option>
-                            <option value="usa">USA</option>
-                            <option value="uk">UK</option>
-                            <option value="canada">Canada</option>
-                        </select>
-                    </div>
-                  
-                </div>
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      // You can trigger email verification API here
+      console.log('Submitted Data:', formData);
+    
+      setSubmitted(true);
 
-                {/* Submit */}
-                <button
-                    type="submit"
-                    className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
-                >
-                    Create Account
-                </button>
-            </form>
+        navigate('/')
+    }
+  };
+
+  return (
+    <div style={{backgroundImage:`linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')` , backgroundSize:'cover',}} className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 p-6">
+      <form onSubmit={handleSubmit} className=" relative text-white dark:bg-gray-800 bg-white/20 backdrop-blur-xl shadow-md rounded-xl w-full max-w-lg p-8 space-y-6">
+        <div className='absolute top-[2%] right-[2%] text-4xl hover:rounded-[50%] hover:bg-black px-2 py-2 hover:text-white transition-all .5s '><a href="/"><FaXmark/></a></div>
+        <h2 className="text-2xl font-bold text-center">Company Registration</h2>
+
+        <div>
+          <label className="block text-sm ">Company Name</label>
+          <input
+            type="text"
+            name="companyName"
+            value={formData.companyName}
+            onChange={handleChange}
+            className="w-full mt-1 p-2 rounded bg-transparent focus:bg-gray-300 border border-gray-300"
+          />
+          {errors.companyName && <p className="text-red-500 text-sm">{errors.companyName}</p>}
         </div>
-    );
-}
 
-export default SignupPage;
+        <div>
+          <label className="block text-sm ">Company Website</label>
+          <input
+            type="url"
+            name="companyWebsite"
+            value={formData.companyWebsite}
+            onChange={handleChange}
+            className="w-full mt-1 p-2 rounded bg-transparent focus:bg-gray-300  border-gray-300 border "
+          />
+          {errors.companyWebsite && <p className="text-red-500 text-sm">{errors.companyWebsite}</p>}
+        </div>
+
+        <div>
+          <label className="block text-sm ">Company Email</label>
+          <input
+            type="email"
+            name="companyEmail"
+            value={formData.companyEmail}
+            onChange={handleChange}
+            className="w-full mt-1 p-2 rounded bg-transparent focus:bg-gray-300 border-gray-300 border "
+          />
+          {errors.companyEmail && <p className="text-red-500 text-sm">{errors.companyEmail}</p>}
+        </div>
+
+        <div>
+          <label className="block text-sm">Designation</label>
+          <input
+            type="text"
+            name="designation"
+            value={formData.designation}
+            onChange={handleChange}
+            className="w-full mt-1 p-2 rounded bg-transparent focus:bg-gray-300 border-gray-300 border "
+          />
+          {errors.designation && <p className="text-red-500 text-sm">{errors.designation}</p>}
+        </div>
+
+        <div>
+          <label className="block text-sm">Person's Email</label>
+          <input
+            type="email"
+            name="personEmail"
+            value={formData.personEmail}
+            onChange={handleChange}
+            className="w-full mt-1 p-2 rounded bg-transparent focus:bg-gray-300 border-gray-300 border "
+          />
+          {errors.personEmail && <p className="text-red-500 text-sm">{errors.personEmail}</p>}
+        </div>
+
+        <div>
+          <label className="block text-sm ">Create Password</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            className="w-full mt-1 p-2 rounded bg-transparent focus:bg-gray-300 border-gray-300 border text-black "
+          />
+          {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+        </div>
+
+        <div>
+          <label className="block text-sm">Confirm Password</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            className="w-full mt-1 p-2 rounded bg-transparent focus:bg-gray-300 border-gray-300 border  text-black"
+          />
+          {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword}</p>}
+        </div>
+
+        <button
+          type="submit"
+          className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition duration-300"
+        >
+          Submit
+        </button>
+
+        {submitted && (
+          <p className="text-green-500 text-center mt-4">
+            Verification email sent! Please check your inbox.
+          </p>
+        )}
+      <p>Already Have An Account ? <Link to="/login" className='text-green-300'>Login</Link></p>
+      </form>
+    </div>
+  );
+};
+
+export default Signup;

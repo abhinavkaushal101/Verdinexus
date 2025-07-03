@@ -13,6 +13,8 @@ import BlogDetails from './Pages/BlogDetails'
 import Sample from './Components/Sample'
 import About from './Pages/About'
 import SliderAbout from './Slider/SliderAbout'
+import Login from './Forms/Login'
+import ForgetPass from './Forms/ForgetPass'
 
 
 
@@ -20,7 +22,7 @@ function AppLayout() {
   const location = useLocation();
 
   // Routes where header/footer should be hidden
-  const hideLayoutRoutes = ['/contactus','/signup'];
+  const hideLayoutRoutes = ['/contactus','/signup' ,'/login','/forgetpassword'];
 
   const hideLayout = hideLayoutRoutes.includes(location.pathname);
 
@@ -34,6 +36,8 @@ function AppLayout() {
       <Route path='/FaQ' element={<Faq/>}/>
       <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/signup' element={<SignupPage/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/forgetpassword' element={<ForgetPass/>}/>
       <Route path='/services/:serviceId' element={<ServiceDetails/>}/>
       <Route path='/blog/:blogId' element={<BlogDetails/>}/>
       <Route path='/about' element={<About/>}/>
@@ -43,7 +47,7 @@ function AppLayout() {
 
 
       </Routes>
-      { <Footer />}
+      { !hideLayout && <Footer />}
     
     </>
   )

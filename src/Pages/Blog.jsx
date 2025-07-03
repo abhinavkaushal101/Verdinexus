@@ -7,49 +7,63 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import React, { useRef } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const Blog = () => {
-      const {t} = useTranslation();
-      const prevRef = useRef(null);
-      const nextRef = useRef(null);
-      const data = [
-        {
-          id:'0',
-          img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          date: '20 april 2024',
-          heading: `${t('boxhead')}`,
-          content: `${t('boxparagraph')}`,
-        },
-        {id:'1',
-          img: "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          date: '20 april 2024',
-          heading: `${t('boxhead')}`,
-          content: `${t('boxparagraph')}`,
-        },
-        {id:'2',
-          img: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          date: '20 april 2024',
-          heading: `${t('boxhead')}`,
-          content: `${t('boxparagraph')}`,
-        },
-        {id:'3',
-          img: "https://images.unsplash.com/photo-1546074177-ffdda98d214f?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          date: '20 april 2024',
-          heading: `${t('boxhead')}`,
-          content: `${t('boxparagraph')}`,
-        },  
-        {id:'4',
-          img: "https://images.unsplash.com/photo-1485988412941-77a35537dae4?q=80&w=1196&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          date: '20 april 2024',
-          heading: `${t('boxhead')}`,
-          content: `${t('boxparagraph')}`,
-        },
-      ]
+  const { t } = useTranslation();
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const data = [
+    {
+      id: '0',
+      img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/verdinexus-4.png",
+      date: '20 april 2024',
+      heading: `Why Sustainability Tech Is the Missing Link in Europe’s Green Transition`,
+      content: `In the race toward a net-zero future, European businesses are facing a fundamental`,
+    },
+    {
+      id: '1',
+      img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/untitled-design-4.png",
+      date: '20 april 2024',
+      heading: `How to Write a Simple Sustainability Policy (Even If You’re Just Starting)`,
+      content: `Hello GreenMinds! If ESG still feels abstract or overwhelming, here’s some good news:`,
+    },
+    {
+      id: '2',
+      img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/untitled-design-2.png",
+      date: '20 april 2024',
+      heading: `Top 5 ESG Mistakes SMEs Make — And How to Avoid Them`,
+      content: `By now, you’ve probably heard how important ESG (Environmental, Social, Governance) is for businesses in Europe`,
+
+    },
+    {
+      id: '3',
+      img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/verdinexus-3.png",
+      date: '20 april 2024',
+      heading: `Beyond the “E” in ESG: Why Social and Governance Matter Too`,
+      content: `When most people hear “ESG”, they think of carbon emissions, climate action, or recycling initiatives.`,
+
+    },
+
+    {
+      id: '4',
+      img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/verdinexus-2.png",
+      date: '20 april 2024',
+      heading: `Why ESG Is No Longer Optional for European SMEs`,
+      content: `If you’re running a small or medium-sized business (SME) in Europe, you’ve likely come across the`,
+    },
+    {
+      id: '5',
+      img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/verdinexus-2.jpg",
+      date: '20 april 2024',
+      heading: `Why VerdiNexus Exists: Bridging Business and Sustainability in the ESG Era`,
+      content: `At VerdiNexus, we believe that sustainability shouldn’t be a luxury—it should be accessible,`,
+    },
+  ]
   return (
-   <>
-            <div className='bg-green-950 h-[40vh] flex justify-center items-end text-4xl text-white pb-6'><h1>Blog</h1></div>
+    <>
+      <div className=' dark:bg-[#0f2c2c] bg-[#0f2c2c] h-[40vh] flex justify-center items-end text-4xl text-white pb-6'><h1>Blog</h1></div>
       <div className="w-full my-10 hidden md:block md:max-w-[90%]  overflow-hidden mx-auto">
         <div className='flex justify-between mx-auto md:my-6 ml-4 md:font-medium dark:text-white md:text-green-950 md:text-4xl'><h1>{t('Blog')}</h1>
           <div>
@@ -70,7 +84,7 @@ const Blog = () => {
           spaceBetween={30}
           slidesPerView={3}
 
-        //   pagination={{ clickable: true }}
+          //   pagination={{ clickable: true }}
           loop={true}
         //   autoplay={{
         //     delay: 3000,
@@ -81,22 +95,22 @@ const Blog = () => {
         >
           {data.map((dataa, index) => (
             <SwiperSlide key={index}>
-              
-              <div className='flex items-start mx-auto flex-col md:w-[350px] px-2 py-2'>
-                <div className='overflow-hidden shadow-xs shadow-white rounded-xl'>
-                  <img className='object-contain w-[100%] rounded-xl hover:scale-[1.1] transition-all ease-in-out duration-700' src={dataa.img} alt="" />
+
+              <div className='flex items-start mx-auto flex-col h-[80vh] px-2 py-2'>
+                <div className='overflow-hidden mx-auto md:w-[350px] md:h-[250px] shadow-xs shadow-white rounded-xl'>
+                  <img className='object-cover  w-[100%] h-[100%] rounded-xl hover:scale-[1.1] transition-all ease-in-out duration-700' src={dataa.img} alt="" />
                 </div>
                 <h3 className='text-xs py-2'>{dataa.date}</h3>
                 <h1 className='font-bold dark:text-green-200 text-gray-800 py-2'>{dataa.heading}</h1>
-                <p className='text-sm'>{dataa.content}</p>
-               <div key={dataa.id}>
-                <Link to={`/blog/${dataa.id}`}><button className='py-2 text-gray-800 dark:text-green-200 font-bold'>Learn more</button></Link></div>
-             
+                <p className='text-sm h-[13%] overflow-hidden'>{dataa.content}...</p>
+                <div key={dataa.id}>
+                  <Link to={`/blog/${dataa.id}`}><button className='py-2 text-gray-800 dark:text-green-200 font-bold'>Learn more</button></Link></div>
+
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-       
+
       </div>
       <div className="w-full md:hidden block md:max-w-[100%] mt-2 pt-10 overflow-hidden mx-auto">
         <div className='flex justify-between items-center mx-auto my-2 ml-4 md:font-medium md:text-green-950 pb-2 text-2xl'><h1>News</h1>
@@ -137,7 +151,7 @@ const Blog = () => {
                 <h1 className='font-bold text-gray-800 dark:text-green-200 py-2'>{dataa.heading}</h1>
                 <p className='text-sm'>{dataa.content}</p>
                 <div key={dataa.id}>
-                <Link to={`/blog/${dataa.id}`}><button className='py-2 text-gray-800 dark:text-green-200 font-bold'>Learn more</button></Link></div>
+                  <Link to={`/blog/${dataa.id}`}><button className='py-2 text-gray-800 dark:text-green-200 font-bold'>Learn more</button></Link></div>
               </div>
             </SwiperSlide>
           ))}

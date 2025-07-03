@@ -152,7 +152,7 @@ body{
   position: sticky;
   /* border: 2px solid; */
   border-radius: 5% !important;
-  margin: 2px auto;
+  /* margin: 2px auto; */
   display: flex;
   flex-direction: column;
   /* justify-content: space-between !important; */
@@ -167,7 +167,7 @@ body{
   top: 0;
   position: sticky;
   /* border: 2px solid; */
-  margin: 2px auto;
+  /* margin: 2px auto; */
   display: flex;
   flex-direction: column;
   /* justify-content: space-between !important; */
@@ -211,17 +211,27 @@ body{
 .left img{
   width: 80%;
 }
+.divbox:nth-child(2){
+  top:50px !important;
+}
+.divbox:nth-child(3){
+  top: 60px !important;
+
+}
+.divbox:nth-child(4){
+  top: 70px !important;
+}
 }
 .divbox{
   width: 100%;
   height: 100vh;
   background-color: #DDF9DB;
   /* overflow-y: scroll; */
-  top: 0;
+  top: 0px;
   position: sticky;
   /* border: 2px solid; */
   border-radius: 10%;
-  margin: 2px auto;
+  /* margin: 2px auto; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -287,6 +297,10 @@ margin-top: 10%;
   border-top-right-radius: 10%;
   /* background-color: #DDF9DB; */
 }
+.contactdesign{
+    /* border-top-left-radius: 10%;
+  border-top-right-radius: 10%; */
+}
 /* .divbox:nth-child(1){
   background-color: #16C47F;
   color: #ffffff;
@@ -294,10 +308,17 @@ margin-top: 10%;
 .divbox:nth-child(3){
   background-color: #254523;
   color: #ffff;
+  top: 90px;
+
+}
+.divbox:nth-child(2){
+  top: 60px;
 }
 .divbox:nth-child(4){
    border-bottom-left-radius: 0%;
   border-bottom-right-radius: 0%; 
+  top: 120px;
+
 }
 .left img{
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
@@ -338,7 +359,7 @@ margin-top: 10%;
 .TextHovers{
   height:50px;
   text-align: center;
-  /* background-color: #16C47F; */
+  /* background-color: #10f69a; */
   overflow: hidden;
   cursor: pointer;
 }
@@ -355,13 +376,13 @@ margin-top: 10%;
 
 }
 .TextHovers:hover{
-  /* background-color: #D2FF72 !important; */
+  /* background-color: #d9ff00 !important; */
   /* background-color: red !important; */
 
 }
 .TextHovers:hover h2{
 transform: translateY(-210%);
-color: white;
+/* color: #D2FF72; */
 }
 .textHover h3{
   transition: all ease-out .2s;
@@ -370,7 +391,7 @@ color: white;
 .textHover:hover h3{
   transform: translateY(-100%);
   /* color: orange !important; */
-  color: yellow;
+  color: #D2FF72  ;
 }
 .signupbtn{
 
@@ -393,7 +414,7 @@ color: white;
 }
 .signupbtns:hover{
   background-color: #254523;
-  color: #BBF7D0;
+  color: #D2FF72;
 }
 
 /* styles.css */

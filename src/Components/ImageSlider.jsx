@@ -5,6 +5,7 @@ import 'swiper/css'; // Core Swiper
 import 'swiper/css/navigation'; // Navigation buttons
 import 'swiper/css/pagination'; // Pagination dots
 import bg from '../assets/graphic/bg.png'
+import bgvideo from '../assets/graphic/bgvideo.mp4'
 
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
@@ -42,7 +43,7 @@ const ImageSlider = () => {
     // </div>
     <>
     <div className='sliderimage bg-green-950 w-screen h-screen md:max-w-[100%] mt-0 overflow-hidden mx-auto'>
-      <video className='  w-[100%] h-screen object-cover inset-0' loop="true" autoplay="autoplay" muted><source src="https://cdn.pixabay.com/video/2018/01/06/13704-250154065_large.mp4"  /></video>
+      <video className='  w-[100%] h-screen object-cover inset-0' loop="true" autoplay="autoplay" muted><source src={`${bgvideo}`}  /></video>
       {/* <img className='w-[100%] h-screen object-cover' src={bg} alt="" /> */}
     </div>
     </>

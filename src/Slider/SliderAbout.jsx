@@ -17,69 +17,37 @@ const SliderAbout = () => {
         {
             name: 'ESG Snapshot Report',
             description: 'A fast, 5-day assessment of your company’s environmental, social, and governance readiness. This includes gap identification and high-level action points to align with CSRD.',
-            img: "https://cdn.pixabay.com/photo/2017/09/05/10/08/office-2717014_1280.jpg"
+            img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/verdinexus-4.png"
         },
         {
             name: 'Carbon Footprint Estimator',
             description: 'Estimate your Scope 1 & 2 emissions (and optionally Scope 3) based on basic company input. Perfect for internal audits, client transparency, or investor decks.',
-            img: "https://cdn.pixabay.com/photo/2020/11/09/15/48/graph-5727061_1280.png"
+            img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/untitled-design-4.png"
 
         },
         {
             name: 'Sustainability Policy Gap Detector',
             description: 'Check your company’s existing documents (HR, procurement, etc.) for alignment with EU Green Policies and social expectations. You’ll get a customized checklist of whats missing.',
-            img: "https://cdn.pixabay.com/photo/2020/11/09/15/48/graph-5727061_1280.png"
+            img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/untitled-design-2.png"
 
         },
         {
             name: 'EU ESG Reporting Format Converter (XBRL Ready)',
             description: 'Send us your raw sustainability data — we’ll convert it into EU CSRD-compliant digital format (XBRL-compatible). No manual formatting required.',
-            img: "https://cdn.pixabay.com/photo/2024/11/18/10/20/businessman-9205819_1280.png"
+            img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/verdinexus-3.png"
         },
         {
             name: 'EEU Green Claim Verifier',
             description: 'Planning to make an eco-friendly product claim? This tool checks whether your claim complies with EU’s Green Claims Directive and backs it with scientific evidence or sourcing validation.',
-            img: "https://cdn.pixabay.com/photo/2021/10/09/10/37/virtual-meeting-6693816_1280.png"
+            img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/verdinexus-2.png"
         },
         {
             name: 'Sustainability Content Rewriter',
             description: 'Send us your policy, website, or presentation content (up to 500 words), and we’ll rewrite it to be ESG-focused, professional, and aligned with EU tone and keywords.',
-            img: "https://cdn.pixabay.com/photo/2020/11/09/15/48/graph-5727061_1280.png"
+            img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/verdinexus-2.jpg"
 
         },
-        {
-            name: 'EU ESG Trends Monthly Brief (Subscription)',
-            description: 'Get the latest EU ESG regulation updates, sector-specific alerts, and sustainability insights each month directly in your inbox.',
-            img: "https://cdn.pixabay.com/photo/2022/01/05/15/44/success-6917397_1280.png"
-
-        },
-        {
-            name: 'Employee ESG Awareness Quiz + Certificate Tool',
-            description: 'Give your team an online quiz to test their ESG knowledge. Upon passing, they receive a customized VerdiNexus ESG certificate.',
-            img: "https://cdn.pixabay.com/photo/2020/11/09/15/48/graph-5727061_1280.png"
-
-        },
-        {
-            name: 'Green HR Policy Pack',
-            description: 'Get ready-to-use HR policies that support sustainability goals — including remote work, inclusive hiring, and ethical labor statements.',
-            img: "https://cdn.pixabay.com/photo/2017/05/14/03/45/data-2311261_1280.png"
-        },
-        {
-            name: 'Eco-Conscious Procurement Guide',
-            description: 'This toolkit helps you redesign your procurement process to prioritize local, ethical, and low-carbon suppliers.',
-            img: "https://cdn.pixabay.com/photo/2018/02/21/17/36/line-graph-3170988_1280.png"
-        },
-        {
-            name: 'EU Regulation Tracker Tool',
-            description: 'Track relevant ESG regulations for your industry and location. Updated quarterly to stay current with EU rules.',
-            img: "https://cdn.pixabay.com/photo/2020/11/09/15/48/graph-5727061_1280.png"
-
-        },
-        {
-            name: "Visual ESG Impact Report Template",
-            description: 'Make your ESG report visually stunning with a plug-and-play template for PowerPoint or Canva, already aligned to CSRD design principles.',
-            img: "https://cdn.pixabay.com/photo/2020/11/09/15/48/graph-5727061_1280.png"
-        },
+      
 
     ]
 

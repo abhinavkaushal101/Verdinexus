@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import ImageSlider from './ImageSlider';
 import { motion } from 'framer-motion';
+import About from '../Pages/About'
 const FoldingScroller = () => {
     const { t } = useTranslation();
     return (
@@ -9,6 +10,8 @@ const FoldingScroller = () => {
         <div className='divboxes flex justify-between flex-col'>
             <div className="divbox imgslider">
                 <ImageSlider />
+                {/* <About/> */}
+                
             </div>
             <div className="divbox ">
                 <div className='boxesss  w-full'>
@@ -88,7 +91,34 @@ const FoldingScroller = () => {
                         className="left md:px-15 md:w-[100%] md:mt-32 rounded-xl "><img className=' rounded-xl' src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></motion.div>
                 </div>
             </div>
+  <div className="divbox">
+                <div className='boxesss w-full'>
+                    <div className="right md:w-[100%] md:px-24">
+                        <motion.h1
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: .5 }}
 
+                            className='md:mb-12 font-semibold md:text-6xl'>{t('next_heading1')}</motion.h1>
+                        <div>
+                            <motion.p
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: .5 }}
+                            >{t('next_heading2')}</motion.p>
+                            {/* <li>{t('next_heading2.para1')}</li>
+                    <li>{t('next_heading2.para2')}</li>
+                    <li>{t('next_heading2.para3')}</li>
+                    <li>{t('next_heading2.para4')}</li> */}
+                        </div>
+                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: .5 }}
+                        className="left md:px-15 md:w-[100%] md:mt-32 rounded-xl "><img className=' rounded-xl' src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></motion.div>
+                </div>
+            </div>
         </div>
     )
 }

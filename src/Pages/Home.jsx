@@ -21,7 +21,7 @@ const Home = () => {
 
       {/* <ImageSlider /> */}
       <div className=' relative w-full h-[100%] '>
-      <div className='absolute w-[80%] md:w-[70%] lg:w-[60%] text-center top-[20%] md:top-[15%] left-[50%] transform -translate-x-1/2 -translate-y-1/2  md:text-6xl  text-2xl font-bold text-white z-10 '>
+      <div className='absolute w-[80%] md:w-[70%] lg:w-[60%] text-center top-[15%] md:top-[13%] left-[50%] transform -translate-x-1/2 -translate-y-1/2  md:text-6xl  text-2xl font-bold text-white z-10 '>
         <div className='py-1.5 mb-1 w-[50%] md:w-[19%] flex justify-center bg-green-600 text-[#0f2c2c] items-center relative rounded-full text-xl' >
           {t('Logo')}
         </div>
@@ -39,11 +39,12 @@ const Home = () => {
 
           className='md:text-sm text-xs py-4 my-4 md:px-20px '>to Embrace ESG and Comply with EU Sustainability Mandates – Affordably, Automatically, and Effectively.” A smarter way to handle sustainability reporting, carbon footprints, and policy gaps — without hiring a full-time team.
         </motion.p>
-        <div className='TextHovers text-xl py-4 md:w-[50%] mx-auto rounded-full bg-gradient-to-r from-teal-400 to-yellow-200 text-green-950 '>
+        <Link to='/services'><div className='TextHovers text-xl py-4 md:w-[50%] mx-auto rounded-full bg-gradient-to-r from-teal-400 to-yellow-200 text-green-950 '>
           <h2>Start Your ESG Journey Today →</h2>
           <br />
-          <h2>Start Your ESG Journey Today →</h2></div>
-
+          <h2>Start Your ESG Journey Today →</h2>
+          </div>
+      </Link>
       </div>
       <FoldingScroller />
       </div>

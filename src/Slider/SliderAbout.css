@@ -1,14 +1,14 @@
 .swiperWrapper{
-    /* min-height: 100vh; */
+    min-height: 130vh;
     display: flex;
     padding-top: 10%;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
     align-items: center;
 
     /* background: linear-gradient(#DDF9DB,rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)); */
     /* background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://cdn.pixabay.com/photo/2020/11/09/15/48/graph-5727061_1280.png');
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -20,16 +20,24 @@
 }
 
 .mySwiper {
-  width: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* padding-top: 50px; */
   padding-bottom: 50px;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0% auto;
 }
 
 .swiper-slides {
   background-position: center;
   background-size: cover;
-  width: 400px;
-  height: 450px;
+  width: 350px;
+  height: 390px;
+  /* margin: 0% aut; */
+
 }
 .swiper-slides img{
     object-fit: cover;
@@ -78,7 +86,7 @@
 }
 .textSlider{
     position: absolute;
-    top: 50%;
+    top: 100%;
     z-index: 100;
     width: 100%;
     /* font-size: 2rem; */
