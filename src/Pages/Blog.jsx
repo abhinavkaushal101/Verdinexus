@@ -102,7 +102,7 @@ const Blog = () => {
                 </div>
                 <h3 className='text-xs py-2'>{dataa.date}</h3>
                 <h1 className='font-bold dark:text-green-200 text-gray-800 py-2'>{dataa.heading}</h1>
-                <p className='text-sm h-[13%] overflow-hidden'>{dataa.content}...</p>
+                <p className='text-sm h-[13%] dark:text-white overflow-hidden'>{dataa.content}...</p>
                 <div key={dataa.id}>
                   <Link to={`/blog/${dataa.id}`}><button className='py-2 text-gray-800 dark:text-green-200 font-bold'>Learn more</button></Link></div>
 
