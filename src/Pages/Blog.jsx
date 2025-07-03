@@ -100,9 +100,10 @@ const Blog = () => {
                 <div className='overflow-hidden mx-auto md:w-[350px] md:h-[250px] shadow-xs shadow-white rounded-xl'>
                   <img className='object-cover  w-[100%] h-[100%] rounded-xl hover:scale-[1.1] transition-all ease-in-out duration-700' src={dataa.img} alt="" />
                 </div>
-                <h3 className='text-xs py-2'>{dataa.date}</h3>
+                {/* <h3 className='text-xs py-2'>{dataa.date}</h3> */}
+                <br />
                 <h1 className='font-bold dark:text-green-200 text-gray-800 py-2'>{dataa.heading}</h1>
-                <p className='text-sm h-[13%] overflow-hidden'>{dataa.content}...</p>
+                <p className='text-sm h-[13%] dark:text-white overflow-hidden'>{dataa.content}...</p>
                 <div key={dataa.id}>
                   <Link to={`/blog/${dataa.id}`}><button className='py-2 text-gray-800 dark:text-green-200 font-bold'>Learn more</button></Link></div>
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaXmark } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
+// import { Signup } from '../ServicesBackend/PostMethod';
 
 
 const Signup = () => {
@@ -48,11 +49,17 @@ const Signup = () => {
   };
 
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
       // You can trigger email verification API here
       console.log('Submitted Data:', formData);
+
+      // Signup(formData).then((resp)=>{
+      //   console.log(resp);
+      //   console.log("sucess")
+      // })
+      // .catch((errors)=>{console.log(errors)})
     
       setSubmitted(true);
 
@@ -63,7 +70,7 @@ const Signup = () => {
   return (
     <div style={{backgroundImage:`linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')` , backgroundSize:'cover',}} className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 p-6">
       <form onSubmit={handleSubmit} className=" relative text-white dark:bg-gray-800 bg-white/20 backdrop-blur-xl shadow-md rounded-xl w-full max-w-lg p-8 space-y-6">
-        <div className='absolute top-[2%] right-[2%] text-4xl hover:rounded-[50%] hover:bg-black px-2 py-2 hover:text-white transition-all .5s '><a href="/"><FaXmark/></a></div>
+        <div className='absolute top-[2%] right-[2%] text-4xl hover:rounded-[50%] hover:bg-green-700 px-2 py-2 hover:text-white transition-all .5s '><Link to='/'><FaXmark/></Link></div>
         <h2 className="text-2xl font-bold text-center">Company Registration</h2>
 
         <div>

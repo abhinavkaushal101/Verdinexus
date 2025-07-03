@@ -230,7 +230,10 @@ const Header = () => {
         <br />
         <div className='md:flex hidden justify-center align-middle items-center'>
           <div className='signupbtns text-center '>
-            <Link to='/signup'><h3>signup</h3><h3>signup</h3></Link>
+            <Link to='/login'><h3>Login</h3><h3>Login</h3></Link>
+          </div>
+          <div className='signupbtns text-center '>
+            <Link to='/signup'><h3>Signup</h3><h3>Signup</h3></Link>
           </div>
 
           {/* three dots feature */}

@@ -402,21 +402,42 @@ transform: translateY(-210%);
 .signupbtns:hover h3{
   transform: translateY(-100%);
 }
-.signupbtns{
-  width: 100px;
+.signupbtns:nth-child(1){
+  width: 70px;
   /* padding: 3px 3px; */
   font-size: 20px;
-  background-color: #D2FF72;
-  border-radius: 7px;
+  background-color: #fff;
+  /* border-radius: 4px; */
+  border-bottom-left-radius: 10px;
   height: 30px;
+  /* color: #000; */
+  color: rgb(18, 137, 255);
+
+  overflow: hidden;
+}
+.signupbtns:nth-child(2){
+  width: 90px;
+  border-top-right-radius: 10px;
+
+  /* padding: 3px 3px; */
+  font-size: 20px;
+  /* border-radius: 7px; */
+  background-color: greenyellow;
+
+  height: 35px;
   color: #000;
   overflow: hidden;
 }
-.signupbtns:hover{
-  background-color: #254523;
-  color: #D2FF72;
+.signupbtns:nth-child(2):hover{
+  color: #ffffff;
+  background-color: rgb(18, 137, 255);
 }
+.signupbtns:nth-child(1):hover{
+  /* color: #ffffff; */
+  color: #ffffff;
+  background-color: rgb(18, 137, 255);
 
+}
 /* styles.css */
 .clip-hexagon {
   clip-path: polygon(

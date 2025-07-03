@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaXmark } from "react-icons/fa6";
 
 const Login = () => {
@@ -42,7 +42,7 @@ const Login = () => {
         onSubmit={handleSubmit}
         className="bg-white dark:bg-gray-800 shadow-lg relative rounded-xl w-full max-w-md p-8 space-y-6"
       >
-        <div className='absolute top-[2%] right-[2%] text-4xl hover:rounded-[50%] hover:bg-black px-2 py-2 hover:text-white transition-all .5s '><a href="/"><FaXmark/></a></div>
+        <div className='absolute top-[2%] right-[2%] text-4xl hover:rounded-[50%] hover:bg-green-700 px-2 py-2 hover:text-white transition-all .5s '><Link to='/'><FaXmark/></Link></div>
         <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-white">
           Company Login
         </h2>
