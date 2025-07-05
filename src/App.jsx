@@ -15,6 +15,8 @@ import About from './Pages/About'
 import SliderAbout from './Slider/SliderAbout'
 import Login from './Forms/Login'
 import ForgetPass from './Forms/ForgetPass'
+import Verify from './Forms/Verify'
+import { AuthProvider } from './Context/AuthContext'
 
 
 
@@ -28,7 +30,7 @@ function AppLayout() {
 
   return (
     <>
-
+<AuthProvider>
     {!hideLayout && <Header />}
       <Routes>
       <Route path='/' element={<Home/>}/>
@@ -36,6 +38,7 @@ function AppLayout() {
       <Route path='/FaQ' element={<Faq/>}/>
       <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/signup' element={<SignupPage/>}/>
+      <Route path="/verify" element={<Verify />} />
       <Route path='/login' element={<Login/>}/>
       <Route path='/forgetpassword' element={<ForgetPass/>}/>
       <Route path='/services/:serviceId' element={<ServiceDetails/>}/>
@@ -48,6 +51,7 @@ function AppLayout() {
 
       </Routes>
       { !hideLayout && <Footer />}
+      </AuthProvider>
     
     </>
   )

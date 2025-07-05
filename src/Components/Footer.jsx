@@ -43,8 +43,8 @@ const Footer = () => {
         <div>
           <h2 className="text-xl font-semibold mb-4">Follow Us</h2>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white text-xl"><ImLinkedin2 /></a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl"><AiFillGithub /></a>
+            <a href="https://www.linkedin.com/company/verdinexus" target="blank" className="text-gray-400 hover:text-white text-xl"><ImLinkedin2 /></a>
+            {/* <a href="#" className="text-gray-400 hover:text-white text-xl"><AiFillGithub /></a> */}
 
           </div>
         </div>

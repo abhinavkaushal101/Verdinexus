@@ -60,7 +60,8 @@ function ContactUs() {
                                         name="name"
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-2 border border-gray-300 bg-transparent focus:bg-slate-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                        placeholder='Enter your name'
+                                        className="w-full px-4 py-2 border placeholder-gray-700 border-gray-300 bg-transparent focus:bg-slate-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                                     />
                                 </div>
                                 <div>
@@ -69,8 +70,9 @@ function ContactUs() {
                                         type="email"
                                         name="email"
                                         onChange={handleChange}
+                                        placeholder='Enter your Email'
                                         required
-                                        className="w-full px-4 py-2 border border-gray-300 bg-transparent focus:bg-slate-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                        className="w-full px-4 py-2 border placeholder-gray-700 border-gray-300 bg-transparent focus:bg-slate-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                                     />
                                 </div>
                             </div>
@@ -82,7 +84,8 @@ function ContactUs() {
                                     name="company"
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:bg-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                    placeholder='Company Name'
+                                    className="w-full px-4 placeholder-gray-700 py-2 border border-gray-300 rounded-md bg-transparent focus:bg-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
                                 />
                             </div>
                             <div>
