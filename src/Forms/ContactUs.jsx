@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Contact from '../assets/graphic/Contact.png'
 import { RxExit } from "react-icons/rx";
 import { FaXmark } from "react-icons/fa6";
-
+import { Link } from 'react-router-dom';
 
 function ContactUs() {
     const [formData, setFormData] = useState({
@@ -32,11 +32,12 @@ function ContactUs() {
 
     return (
         <>
-            <div style={{backgroundImage:`linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://verdinexus.wordpress.com/wp-content/uploads/2025/06/untitled-design-2.png')` , backgroundSize:'cover',}}   className=" contactdesign h-auto  flex-col md:flex-row flex items-center justify-center px-4 py-12">
+            <div style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://verdinexus.wordpress.com/wp-content/uploads/2025/06/untitled-design-2.png')`, backgroundSize: 'cover', }} className=" contactdesign h-auto  flex-col md:flex-row flex items-center justify-center px-4 py-12">
 
                 <div className='p-10 items-center mx-auto relative text-white w-[100%]'>
 
-                    {/* <div className='absolute top-[-10%] text-4xl hover:rounded-[50%] hover:bg-black px-2 py-2 hover:text-white transition-all .5s  left-4'><a href="/"><FaXmark/></a></div> */}
+                   
+
                     <div className='w-[60%]  mx-auto justify-center  flex items-center'>
                         <img className='' src={Contact} alt="" />
                     </div>
@@ -44,13 +45,15 @@ function ContactUs() {
                     <p> Have questions about sustainability, compliance, or how VerdiNexus can help your business? Reach out below and our support team will get back to you within 24 hours.
                         Form Fields:</p>
                 </div>
-                <div className="w-[100%] max-w-3xl  shadow-xl rounded-3xl  bg-white/40 backdrop-blur-md p-8">
+                <div className="w-[100%] max-w-3xl  shadow-xl rounded-3xl relative  bg-white/40 backdrop-blur-md p-8">
+                 <div className='absolute top-[2%] right-[2%] text-4xl hover:rounded-[50%] dark:text-white hover:bg-green-700 px-2 py-2 hover:text-white transition-all .5s '><Link to='/'><FaXmark /></Link></div>
                     <h2 className="text-3xl font-bold mb-6 text-center text-gray-100">Contact Us</h2>
 
                     {submitted ? (
                         <div className="text-center p-8 text-green-600 text-xl">Thank you! We'll be in touch soon.</div>
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-6 ">
+                            
                             {/* <div className='absolute top-[-12%] text-4xl right-0'><FaXmark/></div> */}
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
@@ -117,7 +120,7 @@ function ContactUs() {
                                 >
                                     Send Message
                                 </button>
-                                
+
                             </div>
 
                         </form>

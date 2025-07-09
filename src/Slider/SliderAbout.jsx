@@ -47,48 +47,54 @@ const SliderAbout = () => {
             img: "https://verdinexus.wordpress.com/wp-content/uploads/2025/06/verdinexus-2.jpg"
 
         },
-      
+
 
     ]
 
 
     return (<>
-                {/* <div  className='md:flex hidden bg-[#0f2c2c] h-[30vh] justify-center items-end text-4xl text-white pb-6'><h1>Services</h1></div> */}
+        {/* <div  className='md:flex hidden bg-[#0f2c2c] h-[30vh] justify-center items-end text-4xl text-white pb-6'><h1>Services</h1></div> */}
 
-        <div className='swiperWrapper bg-[#0f2c2c] h-screen relative'>
-            
-            <Swiper
-                className="mySwiper"
-                effect={'coverflow'}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={'auto'}
-                loop={true}
-                coverflowEffect={{
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: true,
-                }}
-                navigation={true}
-                // pagination={true}
-                modules={[EffectCoverflow, Navigation, Pagination]}
-            >
-                {Serviceitems.map((item, index) => (
-                    <SwiperSlide key={index} className='swiper-slides'>
-                        <img src={item.img} />
-                        <div className='textSlider'>
-                            <h1 className='md:text-4xl '>{item.name}</h1>
-                            {/* <p className='text-green-100'>{item.description}</p> */}
-                        </div>
-                    </SwiperSlide>
+      <div className='scrolled'>
+        <div className='scroll'>
+            <div className='swiperWrapper bg-[#0f2c2c] relative'>
 
-                ))}
-               
-            </Swiper>
+                    <Swiper
+                        className="mySwiper"
+                        effect={'coverflow'}
+                        grabCursor={true}
+                        centeredSlides={true}
+                        slidesPerView={'auto'}
+                        loop={true}
+                        coverflowEffect={{
+                            rotate: 40,
+                            stretch: 0,
+                            depth: 500,
+                            modifier: 1,
+                            slideShadows: true,
+                        }}
+                        navigation={true}
+                        // pagination={true}
+                        modules={[EffectCoverflow, Navigation, Pagination]}
+                    >
+                        {Serviceitems.map((item, index) => (
+                            <SwiperSlide key={index} className='swiper-slides'>
+                                <img src={item.img} />
+                                <div className='textSlider'>
+                                    <h1 className='md:text-4xl '>{item.name}</h1>
+                                    {/* <p className='text-green-100'>{item.description}</p> */}
+                                </div>
+                            </SwiperSlide>
+
+                        ))}
+
+                    </Swiper>
+                </div>
         </div>
-        </>
+       
+       
+      </div>
+    </>
 
     );
 };

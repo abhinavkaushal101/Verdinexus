@@ -63,7 +63,7 @@ const Blog = () => {
   ]
   return (
     <>
-      <div className=' dark:bg-[#0f2c2c] bg-[#0f2c2c] h-[40vh] flex justify-center items-end text-4xl text-white pb-6'><h1>Blog</h1></div>
+      <div className=' dark:bg-[#0f2c2c] bg-[#0f2c2c] h-[15vh] flex justify-center items-end text-4xl text-white pb-6'></div>
       <div className="w-full my-10 hidden md:block md:max-w-[90%]  overflow-hidden mx-auto">
         <div className='flex justify-between mx-auto md:my-6 ml-4 md:font-medium dark:text-white md:text-green-950 md:text-4xl'><h1>{t('Blog')}</h1>
           <div>

@@ -50,14 +50,14 @@ const Home = () => {
       </div>
 
 
-      <div className='BordersBox flex flex-col my-10 dark:bg-[#0f2c2c] dark:text-white '>
+      <div className='BordersBox flex flex-col dark:bg-[#0f2c2c] dark:text-white '>
         <ServicesLanding />
         {/* <Link className='mx-auto md:hidden block' to='/services'><button className='my-8 items-center mx-auto bg-green-950 dark:bg-white dark:text-green-950 text-white w-[200px] h-[50px] rounded-full font-semibold hover:bg-green-300 hover:text-green-950 transition-all ease-in-out duration-700'>Show All</button></Link>
         <Link to='/services' className='hidden mx-auto md:block'><button className='textHovers bg-green-950 text-xl w-[200px] dark:bg-white dark:text-green-950 text-white rounded-full font-semibold hover:bg-green-300 hover:text-green-950 transition-all space-y-2 ease-in-out duration-700'><h3 className='pt-1'>Show All</h3><h3>Show All</h3></button></Link> */}
       </div>
       <div className='boxes flex justify-center flex-col dark:bg-[#0f2c2c] dark:text-white md:h-[130vh] items-center'>
         <Boxes />
-        <Link to='/blog'><button className='textHovers my-10 bg-green-950 text-xl w-[200px] dark:bg-white dark:text-green-950 text-white rounded-full font-semibold hover:bg-green-300 hover:text-green-950 transition-all space-y-2 ease-in-out duration-700'><h3 className='pt-1'>Read more</h3><h3>Read more</h3></button></Link>
+        <Link to='/blog'><button className='textHovers bg-green-950 text-xl w-[200px] dark:bg-white dark:text-green-950 text-white rounded-full font-semibold hover:bg-green-300 hover:text-green-950 transition-all space-y-2 ease-in-out duration-700'><h3 className='pt-1'>Read more</h3><h3>Read more</h3></button></Link>
       </div>
       <div className='w-[90%] md:w-[80%]  md:h-[100vh] my-2 flex flex-col text-center items-center justify-center mx-auto'>
         <div className='md:my-24 '><h1 className='md:text-4xl py-4 dark:text-white'>Client Testimonials </h1>
@@ -65,7 +65,7 @@ const Home = () => {
         </div>
         <Company />
       </div>
-      <ContactUs />
+      {/* <ContactUs /> */}
 
     </>
   )

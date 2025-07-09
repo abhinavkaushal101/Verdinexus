@@ -9,11 +9,11 @@ export const ContextProvider = ({ children }) => {
 
     useEffect(() => {
         const body = document.body;
-        document.body.classList.remove('bg-white', 'bg-[#0f2c2c]')
+        document.body.classList.remove('bg-white', 'bg-white')
         if (theme === 'light') {
             body.classList.add('bg-white');
         } else {
-            body.classList.add('bg-[#0f2c2c]')
+            body.classList.add('bg-white')
         }
         
         document.body.classList.toggle('dark', theme === 'dark');

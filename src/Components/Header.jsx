@@ -13,6 +13,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
+import DropdownMenu from './Drop';
 
 const Serviceitems = [
   {
@@ -138,6 +139,12 @@ const Serviceitems = [
 ]
 
 const Header = () => {
+  // const [click , setClick] =useState(false)
+
+  // const onclick =()=>{
+  //   setClick(!click)
+  // }
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -232,9 +239,9 @@ const Header = () => {
           <div className='signupbtns text-center '>
             <Link to='/login'><h3>Login</h3><h3>Login</h3></Link>
           </div>
-          <div className='signupbtns text-center '>
+          {/* <div className='signupbtns text-center '>
             <Link to='/signup'><h3>Signup</h3><h3>Signup</h3></Link>
-          </div>
+          </div> */}
 
           {/* three dots feature */}
 
@@ -251,6 +258,8 @@ const Header = () => {
             <BsThreeDotsVertical className={`${scrolled ? 'text-green-950' : 'text-white'}`} />
           </IconButton>
           <Menu
+            // className=
+
             id="long-menu"
             anchorEl={anchorEl}
             open={open}
@@ -259,7 +268,9 @@ const Header = () => {
               paper: {
                 style: {
                   // maxHeight: ITEM_HEIGHT * 4.5,
-                  width: '15ch',
+                  height:' 20ch',
+                  width: '10ch',
+
                 },
               },
               list: {
@@ -271,13 +282,33 @@ const Header = () => {
             <MenuItem onClick={handleClose}>
               <Link to='/FaQ'><button class="dropbtn">{t('fQ')}</button></Link>
             </MenuItem>
-            <MenuItem><button onClick={ToggleTheme} className='text-xl'>{theme === 'light' ? 'dark' && "Dark" : 'light' && "Light"}
+            {/* <MenuItem><button onClick={ToggleTheme} className='text-xl'>{theme === 'light' ? 'dark' && "Dark" : 'light' && "Light"}
             </button>
-            </MenuItem>
+            </MenuItem> */}
 
+            {/* <MenuItem>
+              <div className="dropdown  ">
+                <div className='text-md items-center flex'>{
+                  scrolled ? <FontAwesomeIcon icon={faGlobe} style={{ color: '#00000' }} /> : <FontAwesomeIcon icon={faGlobe} />} <p className='px-1'>{t('Language')}</p>
+                  {scrolled ? <FontAwesomeIcon icon={faCaretDown} /> : <FontAwesomeIcon icon={faCaretDown} />}
+                </div>
+                <MenuItem>
+                  <div class="dropdown-contents w-[100%] text-black  flex-col items-start">
+                    <ul className='space-y-2 w-[100%]'>
+                      <li className='p-2 cursor-pointer hover:bg-green-200 hover:text-black' onClick={() => changeLanguage('en')}>English</li>
+                      <li className='p-2 cursor-pointer hover:bg-green-200 hover:text-black' onClick={() => changeLanguage('hi')}>Hindi</li>
+                      <li className='p-2 cursor-pointer hover:bg-green-200 hover:text-black' onClick={() => changeLanguage('en')}>Europe</li>
+                    </ul>
+                  </div>
+                </MenuItem>
+
+              </div>
+            </MenuItem> */}
+          <DropdownMenu />
+<MenuItem></MenuItem>
           </Menu>
           <br />
-          <div className="dropdown  ">
+          {/* <div className="dropdown  ">
             <div className='text-md items-center flex'>{
               scrolled ? <FontAwesomeIcon icon={faGlobe} style={{ color: '#00000' }} /> : <FontAwesomeIcon icon={faGlobe} />} <p className='px-1'>{t('Language')}</p>
               {scrolled ? <FontAwesomeIcon icon={faCaretDown} /> : <FontAwesomeIcon icon={faCaretDown} />}
@@ -289,8 +320,7 @@ const Header = () => {
                 <li className='p-2 cursor-pointer hover:bg-green-200 hover:text-black' onClick={() => changeLanguage('en')}>Europe</li>
               </ul>
             </div>
-          </div>
-
+          </div> */}
 
         </div>
 

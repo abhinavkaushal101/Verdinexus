@@ -11,7 +11,7 @@ const resources = {
             About: 'About',
             Contact: 'Contact',
             fQ: 'F&Q',
-            Language: 'En',
+            Language: 'English',
             heading: 'Welcome to Your ESG Command Center',
             heading_paragraph: 'Track, Improve, and Report Your Sustainability Journey',
             Blog: 'Blog',

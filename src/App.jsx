@@ -17,6 +17,9 @@ import Login from './Forms/Login'
 import ForgetPass from './Forms/ForgetPass'
 import Verify from './Forms/Verify'
 import { AuthProvider } from './Context/AuthContext'
+import Jayris from './Components/Jayris'
+
+
 
 
 
@@ -46,8 +49,10 @@ function AppLayout() {
       <Route path='/about' element={<About/>}/>
       <Route path='/blog' element={<Blog/>}/>
       <Route path='/services' element={<SliderAbout/>}/>
-      
+      <Route path='/jayris' element={<Jayris/>}/>
 
+
+      {/* <Route path='/drop' element={<DropdownMenu/>} /> */}
 
       </Routes>
       { !hideLayout && <Footer />}
