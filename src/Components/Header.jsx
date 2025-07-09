@@ -224,13 +224,13 @@ const Header = () => {
               <h3>{t('Blog')}</h3>
             </div>
           </a> */}
-          <NavLink to='/contactus' className={({ isActive }) =>
+          <NavLink to='/jayris' className={({ isActive }) =>
             `textHover transition-all duration-200 ${isActive ? 'text-yellow-400 underline underline-offset-4' : 'text-white hover:text-yellow-300'
             }`
           }>
             <div class={`textHover ${scrolled ? 'text-green-950' : 'text-white'}`}>
-              <h3> {t('Contact')}</h3>
-              <h3>{t('Contact')}</h3>
+              <h3> Jayris</h3>
+              <h3>Jayris</h3>
             </div>
           </NavLink>
         </nav>
