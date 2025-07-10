@@ -62,7 +62,7 @@ const Signup = () => {
     if (validate()) {
       // You can trigger email verification API here
       console.log('Submitted Data:', formData);
-      await axios.post('http://localhost:8080/api/auth/signup', formData);
+      await axios.post('http://localhost:8080/api/auth/register', formData);
       alert('Signup successful! Please verify your email.');
       navigate('/login');
       setSubmitted(true);
